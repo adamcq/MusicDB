@@ -1,3 +1,11 @@
+-------------- INFO ----------------------
+/*
+ * To test this program you need to:
+ * 	1. run create_sgms.sql
+ * 	2. run populate.sql
+ *  3. run this file
+ * */
+
 -- CREATE LAST_BACKUP
 INSERT INTO last_backup (date) VALUES (current_date);
 
@@ -73,6 +81,7 @@ CREATE VIEW e_and_nof_students AS
 SELECT ensemble_id, COUNT(student_id) AS nof_students FROM student_ensemble GROUP BY ensemble_id;
 
 CREATE VIEW e_pricing_info AS
+
 SELECT se.ensemble_id AS lesson_id,
 	se.student_id,
 	date, 
@@ -140,7 +149,10 @@ SELECT
 	END 
 	)
 FROM il_pricing_info ilpi
-WHERE date > (SELECT max(date) FROM last_backup)
+WHERE date > (SELECT MAX (date)
+FROM last_backup
+WHERE date NOT IN (SELECT Max (date)
+FROM last_backup))
 AND date <= current_date
 AND student_id IS NOT NULL;
 
