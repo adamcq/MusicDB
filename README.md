@@ -3,7 +3,7 @@
 ## How to execute
 
 1. Clone this git repository
-1. Change to the newly created directory `cd jdbc-sgms`
+1. Change to Task4 - final in the newly created directory `cd MusicDB/Task4\ -\ final/`
 1. Make sure there is a database which can be reached with the url on line 74-75 in `SchoolDAO.java`. There are two ways to do this.
    1. Create a database called sgms, wich can be
       reached on port 5432 at localhost, by the user 'postgres' with the
