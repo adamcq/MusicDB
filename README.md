@@ -3,15 +3,15 @@
 ## How to execute
 
 1. Clone this git repository
-1. Change to Task4 - final in the newly created directory `cd MusicDB/Task4\ -\ final/`
+1. Change to Task4 - final in the newly created directory `cd MusicDB/Task4/`
 1. Make sure there is a database which can be reached with the url on line 74-75 in `SchoolDAO.java`. There are two ways to do this.
    1. Create a database called sgms, wich can be
       reached on port 5432 at localhost, by the user 'postgres' with the
       password 'postgres'.
    1. Change the url to match your database.
-1. Create the tables by running `src/main/resources/create_db.sql`  
-1. Populate the database by running `src/main/resources/populate_db.sql`
-1. Run the program from `src/main/java/se/kth/iv1351/sgms/startup/Main.java`
+1. Create the tables by running `Task4/src/main/resources/create_db.sql`  
+1. Populate the database by running `Task4/src/main/resources/populate_db.sql`
+1. Run the program from `Task4/src/main/java/se/kth/iv1351/sgms/startup/Main.java`
 
 ## Commands for the program
 
